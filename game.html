@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>나무위키 탐색 게임</title>
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet"> 
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="widget">
+    <div class="widget-left">
+      <h2 id="startDocument">시작 문서: 없음</h2>
+      <h2 id="targetDocument">목표 문서: 없음</h2>
+    </div>
+  
+    <div class="widget-center">
+      <h3></h3>
+      <div id="history" class="history-list"></div>
+    </div>
+  
+    <div class="widget-right">
+      <div class="timer">
+        <p>걸린 시간: <span id="gameTime">00:00</span></p>
+      </div>
+      <div class="buttons">
+        <button onclick="back()">뒤로가기</button>
+        <button onclick="giveUp()" class="give-up">포기하기</button>
+      </div>
+    </div>
+  </div>
+  
+  <div id="content" class="content">
+    <!-- 여기에서 나무위키 문서 HTML을 동적으로 로드 -->
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
