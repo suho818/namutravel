@@ -27,7 +27,7 @@ async function loadWiki(url) {
      return;
   }
   try {
-    const response = await fetch(`https://port-0-wikichain-m670frba2e8f9615.sel4.cloudtype.app/wiki?url=${encodeURIComponent(apiUrl)}`);
+    const response = await fetch(`/api/wiki?url=${encodeURIComponent(apiUrl)}`);
     const data = await response.json();
     // 에러 응답 처리
     if (data.error) {
