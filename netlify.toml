@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/api/*"                               
-  to = "https://port-0-wikichain-m670frba2e8f9615.sel4.cloudtype.app/:splat" 
+  from = "/api/wiki"
+  to = "https://namu.wiki"
   status = 200
   force = true
