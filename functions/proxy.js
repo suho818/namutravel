@@ -3,12 +3,12 @@ const axios = require("axios");
 exports.handler = async function (event) {
   try {
     const url = event.queryStringParameters.url;
-    if (!url || !url.startsWith("https://namu.wiki/")) {
+    /*if (!url || !url.startsWith("https://namu.wiki/")) {
       return {
         statusCode: 400,
         body: JSON.stringify({ error: "유효한 나무위키 URL이 필요합니다." }),
       };
-    }
+    }*/
 
     // 나무위키에서 HTML 데이터 가져오기
     const response = await axios.get(url, {
