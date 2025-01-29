@@ -21,27 +21,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 async function loadWiki(url) {
-    const apiUrl = url || document.getElementById("urlInput").value;
-
-    if (!apiUrl.startsWith("https://namu.wiki/")) {
-     alert("올바른 나무위키 URL을 입력하세요.");
-     return;
-  }
   try {
-    const response = await axios.get("/api/wiki/이상혁", {
-      headers: {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36",
-        Referer: "https://namu.wiki",
-        Origin: "https://namu.wiki",
-      },
-    });
+    // Netlify 서버리스 함수 요청
+    const response = await fetch(`/api/wiki?url=${encodeURIComponent(url)}`);
     const data = await response.json();
-    // 에러 응답 처리
+
     if (data.error) {
       alert(data.error);
       document.getElementById("content").innerText = data.error;
       return;
     }
+
+    // 데이터 표시
+    document.getElementById("title").innerText = `문서 제목: ${data.title}`;
+    document.getElementById("content").innerHTML = data.content;
+   
 
     // 제목과 내용 렌더링
     const contentDiv = document.getElementById("content");

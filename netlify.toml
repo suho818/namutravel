@@ -1,10 +1,7 @@
+[build]
+  functions = "functions"  # Netlify Lambda 함수 경로 설정
+
 [[redirects]]
-  from = "/api/wiki/*"
-  to = "https://namu.wiki/w/:splat"
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
   status = 200
-  force = true
-[[redirects]]
-  from = "/api/snu"
-  to = "https://snu.ac.kr"
-  status = 200
-  force = true
