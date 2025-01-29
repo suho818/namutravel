@@ -1,4 +1,3 @@
-const axios = require("axios");
 const navigationHistory = [];
 const navigationHistoryIncludeBack = [];
 let startTime;
