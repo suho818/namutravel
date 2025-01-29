@@ -3,3 +3,8 @@
   to = "https://namu.wiki"
   status = 200
   force = true
+[[redirects]]
+  from = "/api/snu"
+  to = "https://snu.ac.kr"
+  status = 200
+  force = true
