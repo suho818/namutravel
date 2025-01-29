@@ -1,3 +1,4 @@
+const axios = require("axios");
 const navigationHistory = [];
 const navigationHistoryIncludeBack = [];
 let startTime;
@@ -27,7 +28,7 @@ async function loadWiki(url) {
      return;
   }
   try {
-    const response = await fetch("/api/wiki/이상혁", {
+    const response = await axios.get("/api/wiki/이상혁", {
       headers: {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36",
         Referer: "https://namu.wiki",
