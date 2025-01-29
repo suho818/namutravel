@@ -2,6 +2,7 @@
   functions = "functions"  # Netlify Lambda 함수 경로 설정
 
 [[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
+  from = "/api/wiki"
+  to = "/.netlify/functions/proxy"
   status = 200
+  force = true
