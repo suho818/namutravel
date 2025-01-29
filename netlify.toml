@@ -1,6 +1,6 @@
 [[redirects]]
-  from = "/api/wiki"
-  to = "https://namu.wiki"
+  from = "/api/wiki/*"
+  to = "https://namu.wiki/w/:splat"
   status = 200
   force = true
 [[redirects]]
